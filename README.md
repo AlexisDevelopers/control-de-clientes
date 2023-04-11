@@ -1,64 +1,70 @@
-El código presentado es un componente principal de una aplicación React que gestiona un listado de clientes. La aplicación permite visualizar, agregar, editar y eliminar clientes a través de una interfaz gráfica y modales.
+# Getting Started with Create React App
 
-Importación de módulos y componentes
-Se importan los módulos y componentes necesarios:
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-React y useState de la librería react
-Navbar (componente de la barra de navegación)
-dataClientes (datos de ejemplo para clientes)
-Componentes para las acciones y modales: ClientTable, ModalVer, ModalEditar, ModalEliminar y ModalInsertar.
-Componente App
-El componente principal App contiene el estado de los clientes y de los modales que se utilizan para realizar diferentes acciones. Las funciones y acciones se pasan como props a los componentes hijos para gestionar y modificar el estado de los clientes.
+## Available Scripts
 
-Se definen los siguientes estados:
+In the project directory, you can run:
 
-clientes: un array que contiene los datos de los clientes.
-modalEditar, modalEliminar, modalInsertar, modalVer: estados booleanos para controlar la apertura y cierre de los modales.
-clienteSeleccionado: objeto que contiene los datos del cliente seleccionado en una acción.
-Funciones y acciones
-El componente App define varias funciones y acciones que permiten gestionar y modificar el estado de los clientes:
+### `npm start`
 
-handleChange: función que maneja el cambio en los campos de los formularios de los modales.
-seleccionarCliente: función que selecciona un cliente y abre el modal correspondiente según la acción.
-editar: función que actualiza los datos de un cliente existente.
-eliminar: función que elimina un cliente del listado.
-nuevoCliente: función que crea un objeto vacío de cliente para el modal de inserción.
-abrirModalInsertar: función que abre el modal de inserción y selecciona un nuevo cliente.
-generarIdUnico: función que genera un ID único para un nuevo cliente.
-insertar: función que agrega un nuevo cliente al listado de clientes.
-Renderizado del componente
-El componente App renderiza los componentes hijos y modales, y pasa las funciones, estados y acciones necesarias a través de props.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## Componentes
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-## Navbar
-Este componente muestra una barra de navegación en la parte superior de la página. Utiliza la clase .navbar de Bootstrap para crear la barra.
+### `npm test`
 
-## ClientTable
-Este componente muestra el listado de clientes en una tabla y permite realizar acciones sobre ellos (ver, editar, eliminar). Recibe las propiedades clientes y acciones que contienen los datos y funciones necesarios para manejar los eventos en la tabla.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## ModalVer
-Este componente muestra los detalles de un cliente en un modal. Recibe las propiedades clienteSeleccionado, modalVer y setModalVer, que contienen los datos del cliente seleccionado y las funciones para abrir y cerrar el modal.
+### `npm run build`
 
-## ModalEditar
-Este componente permite editar los datos de un cliente en un modal. Recibe las propiedades clienteSeleccionado, handleChange, setModalEditar, modalEditar y acciones, que contienen los datos del cliente seleccionado, la función para manejar los cambios en los campos del formulario, las funciones para abrir y cerrar el modal, y las funciones necesarias para realizar la edición del cliente.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## ModalEliminar
-Este componente muestra un mensaje de confirmación antes de eliminar un cliente. Recibe las propiedades clienteSeleccionado, modalEliminar, setModalEliminar y eliminar, que contienen los datos del cliente seleccionado, las funciones para abrir y cerrar el modal y la función para eliminar el cliente.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-## ModalInsertar
-Este componente permite insertar un nuevo cliente en el listado. Recibe las propiedades clienteSeleccionado, handleChange, setModalInsertar, modalInsertar y acciones, que contienen los datos del nuevo cliente, la función para manejar los cambios en los campos del formulario, las funciones para abrir y cerrar el modal, y las funciones necesarias para realizar la inserción del cliente.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## ModalInsertar
-Este componente permite insertar un nuevo cliente en el listado. Contiene un formulario con los campos necesarios para agregar un nuevo cliente. Recibe las propiedades clienteSeleccionado, handleChange, setModalInsertar, modalInsertar y acciones.
+### `npm run eject`
 
-clienteSeleccionado: objeto que contiene los datos del nuevo cliente.
-handleChange: función que maneja los cambios en los campos del formulario.
-setModalInsertar: función para abrir y cerrar el modal.
-modalInsertar: estado booleano que controla si el modal está abierto o cerrado.
-acciones: objeto que contiene las funciones necesarias para manejar las acciones del formulario.
-El componente contiene un formulario con los campos de nombre, telefono, email y direccion para agregar un nuevo cliente al listado.
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-## ClientRow
-Este componente es una fila de la tabla de clientes que muestra la información de un cliente y permite realizar acciones sobre él (ver, editar, eliminar). Recibe las propiedades cliente y acciones.
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

@@ -29,9 +29,17 @@ function ModalVer({ clienteSeleccionado, modalVer, setModalVer }) {
               <input readOnly type="email" className="form-control" name="email" value={clienteSeleccionado && clienteSeleccionado.email} />
             </div>
             <div className="form-group">
-              <label htmlFor="direccion">Dirección</label>
-              <input readOnly type="text" className="form-control" name="direccion" value={clienteSeleccionado && clienteSeleccionado.direccion} />
+              <label htmlFor="direccion">Direcciones</label>
+              <select className="form-control" name="direccion" readOnly>
+                {clienteSeleccionado && clienteSeleccionado.direcciones && clienteSeleccionado.direcciones.map((direccion, index) => (
+                  <option key={index} value={`${direccion.calle}, ${direccion.ciudad}, ${direccion.pais}`}>
+                    {direccion.calle}, {direccion.ciudad}, {direccion.pais}
+                  </option>
+                ))}
+
+              </select>
             </div>
+
           </div>
           <div className="modal-footer">
             <button type="button" className="btn btn-secondary" data-dismiss="modal" onClick={() => setModalVer(false)}>Cerrar</button>
@@ -43,5 +51,4 @@ function ModalVer({ clienteSeleccionado, modalVer, setModalVer }) {
 }
 
 export default ModalVer;
-
 

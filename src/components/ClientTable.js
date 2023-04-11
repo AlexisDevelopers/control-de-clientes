@@ -13,7 +13,7 @@ function ClientTable({ clientes, acciones }) {
             <th scope="col">Nombre</th>
             <th scope="col">Teléfono</th>
             <th scope="col">Email</th>
-            <th scope="col">Dirección</th>
+            {/* <th scope="col">Dirección</th> */}
             <th></th>
           </tr>
         </thead>
